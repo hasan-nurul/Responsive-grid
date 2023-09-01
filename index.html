@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | 3-column preview card component</title>
+  <style>
+    body{
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container{
+      display: grid;
+      grid-template-columns: 330px 330px 330px;
+      grid-auto-rows: 530px;
+    }
+    .col1 {
+      border-radius: 9px 0px 0px 9px;
+    }
+    .col3{
+      border-radius: 0px 9px 9px 0px;
+    }
+    .heading{
+      font-size: 40px;
+      color: hsl(0, 0%, 95%);
+      font-family: 'Big Shoulders Display', cursive;
+      font-weight: 700;
+      margin: 60px 0px 50px 50px;
+    }
+    h5{
+      all:unset;
+    }
+    p{
+      font-size: 15px;
+      color: hsla(0, 0%, 100%, 0.75);
+      font-family: 'Lexend Deca', sans-serif;
+      margin: 30px 60px 30px 50px;
+      letter-spacing: 0.8px;
+      line-height: 30px;
+      text-align:left;
+    }
+     #btn1 a:hover,  #btn2 a:hover,  #btn3 a:hover{
+      color: white;
+      cursor: pointer;
+    }
+    #btn1 a, #btn2 a, #btn3 a{
+      text-decoration: none;    
+    }
+    #btn1 a{
+      color: hsl(31, 77%, 52%);   
+    }
+    #btn2 a{
+      color: hsl(184, 100%, 22%);
+    }
+    #btn3 a{
+      color: hsl(179, 100%, 13%);
+    }
+    
+    button{
+      width: 160px; 
+      height: 35px; 
+      border: none; 
+      border-radius: 30px; 
+      padding: 15px 20px 35px 20px;
+      margin: 50px 0px 30px 50px;
+      font-size: 15px;
+      background-color: hsl(0, 0%, 95%);
+      font-family: 'Lexend Deca', sans-serif;
+    }
+    button:hover{
+      background-color: rgba(242,242,242,0.0);
+      border: 2px solid white;
+      cursor:pointer;
+    }
+    img{
+      margin: 50px 0px 20px 50px;
+    }
+    .headv{
+      margin-top: 10px;
+    }
+    @media screen and (orientation:portrait){
+      body{
+      margin: 50px 10px 50px 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      }
+
+      .container{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-auto-rows: auto;
+    }
+    .col1{
+      grid-column: 1;
+      grid-row: 1;
+      border-radius: 8px 8px 0px 0px;
+
+    } 
+    .col2{
+      grid-column: 1;
+      grid-row: 2;
+    }  
+    .col3{
+      grid-column: 1;
+      grid-row: 3;
+      border-radius: 0px 0px 8px 8px;
+    }
+    }
+  </style>
+</head>
+  <body>
+    <div class="container">
+      <div class="col1" style="background-color: hsl(31, 77%, 52%);">
+        <img src="Images/icon-sedans.svg">
+        <div class="headv">         
+        <h5 class="heading">SEDANS</h5>
+      </div>
+        <p>
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+        or on your next road trip.
+        </p>
+        <button id="btn1"><a href="#">Learn More</a></button>
+      </div>
+      <div class="col2" style="background-color: hsl(184, 100%, 22%);">
+        <img src="Images/icon-suvs.svg">
+        <div class="headv">
+        <h5 class="heading">SUVS</h5>
+      </div>
+        <p>
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+        and off-road adventures.
+        </p>
+        <button id="btn2"><a href="#">Learn More</a></button>
+      </div>
+      <div class="col3" style="background-color: hsl(179, 100%, 13%);">
+        <img src="Images/icon-luxury.svg">
+        <div class="headv">
+        <h5 class="heading">LUXURY</h5>
+      </div>
+        <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+        rental and arrive in style.
+        </p>
+        <button id="btn3"><a href="#">Learn More</a></button>
+      </div> 
+    </div>
+  </body>
+</html>
